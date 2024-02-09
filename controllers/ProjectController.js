@@ -7,6 +7,7 @@ const cloudinary = require('../cloudinaryconfig.js');
 
 const createProjectController = async (req, res) => {
   try {
+    console.log(req.user);
     console.log(req.fields);
     const { name, description, links, techstacks, comments, rating} = req.fields;
     const { photo } = req.files;
