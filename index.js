@@ -43,6 +43,7 @@ connectDB();
 
 //   next();
 // });
+app.set('trust proxy', 1);
 app.use(cors({
    origin: /\.vercel\.app$/,
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
