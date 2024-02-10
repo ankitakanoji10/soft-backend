@@ -44,7 +44,7 @@ connectDB();
 //   next();
 // });
 app.use(cors({
-   origin: "https://unisync-front.vercel.app",
+   origin: /\.vercel\.app$/,
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
   credentials: true,
   optionsSuccessStatus: 204 
