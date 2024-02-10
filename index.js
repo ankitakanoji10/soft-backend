@@ -24,7 +24,7 @@ const { default: slugify } = require('slugify');
 dotenv.config();
 connectDB();
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "https://unisync-d3hz.onrender.com",
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
   credentials: true,
   optionsSuccessStatus: 204 
