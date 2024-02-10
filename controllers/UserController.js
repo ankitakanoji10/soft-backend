@@ -228,7 +228,7 @@ const ProfileCoursesController = async (req, res) => {
   try {
     if (!req.user)
     {
-      res.status(401).send({
+      return res.status(401).send({
         success: false, 
         message: "user not loggedin",
          
