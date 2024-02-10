@@ -139,7 +139,7 @@ app.get('/login',
       function(req, res) {
         // Successful authentication, redirect home.
         console.log(req.user);
-        res.redirect('https://unisync-front.vercel.app/profile-page');
+        res.redirect('https://unisync-front.vercel.app/all-user');
 });
 // // Login Route
 // app.get('/login', 
