@@ -23,7 +23,12 @@ const { default: slugify } = require('slugify');
 // app.use(formidableMiddleware());
 dotenv.config();
 connectDB();
-app.use(cors());
+app.use(cors({
+  origin: "http://localhost:3000",
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+  credentials: true,
+  optionsSuccessStatus: 204 
+}));
 app.use(morgan('dev'));
 app.use(session({
   secret: '3453ab55-1165-4586-9a37-405ae362cff8',
