@@ -24,7 +24,7 @@ const { default: slugify } = require('slugify');
 dotenv.config();
 connectDB();
 app.use(cors({
-  origin: "https://unisync-front.vercel.app",
+  origin: "https://unisync-d3hz.onrender.com",
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
   credentials: true,
   optionsSuccessStatus: 204 
@@ -118,7 +118,7 @@ app.get('/login',
       function(req, res) {
         // Successful authentication, redirect home.
         console.log(req.user);
-        res.redirect('https://unisync-front.vercel.app/profile-page');
+        res.redirect('https://unisync-d3hz.onrender.com/profile-page');
 });
 // // Login Route
 // app.get('/login', 
