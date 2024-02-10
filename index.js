@@ -46,7 +46,7 @@ passport.use(new MicrosoftStrategy({
     // Standard OAuth2 options
     clientID: 'b0e4adce-e6e3-46f5-aec9-82a571af47ae',
     clientSecret: 'BOq8Q~_vWnVyILd_mJ75gbvDZcaDfAkov-eHmcMZ',
-    callbackURL: "http://localhost:8000/auth/outlook",
+    callbackURL: "https://unisync-api.onrender.com/auth/outlook",
     scope: ['user.read'],
 
     // Microsoft specific options
