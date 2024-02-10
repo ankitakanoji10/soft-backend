@@ -118,7 +118,7 @@ app.get('/login',
       function(req, res) {
         // Successful authentication, redirect home.
         console.log(req.user);
-        res.redirect('https://www.google.com/');
+        res.redirect('https://unisync-d3hz.onrender.com/profile-page');
 });
 // // Login Route
 // app.get('/login', 
