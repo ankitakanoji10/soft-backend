@@ -9,7 +9,7 @@ const app = express();
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: true }));
 
-const session = require('express-session');
+const session = require('cookie-session');
 const passport = require('./auth.js'); // Import the passport configuration
 const dotenv = require("dotenv");
 const connectDB = require("./config/db.js");
@@ -30,9 +30,16 @@ app.use(cors({
   optionsSuccessStatus: 204 
 }));
 app.use(morgan('dev'));
-app.use(session({ secret: '3453ab55-1165-4586-9a37-405ae362cff8', resave: true, saveUninitialized: true }));
+app.use(session({
+  secret: '3453ab55-1165-4586-9a37-405ae362cff8',
+  resave: true,
+  saveUninitialized: true,
+  cookie: {
+    secure:true,
+  }
+}));
 // // Initialize Passport and restore authentication state if available
-app.use(passport.initialize());
+app.use(passport.initialize()); 
 app.use(passport.session());
 var MicrosoftStrategy = require('passport-microsoft').Strategy;
 passport.use(new MicrosoftStrategy({
