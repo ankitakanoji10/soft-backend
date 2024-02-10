@@ -117,7 +117,7 @@ app.get('/login',
       passport.authenticate('microsoft', { failureRedirect: '/login' }),
       function(req, res) {
         // Successful authentication, redirect home.
-        res.redirect('https://unisync-api.onrender.com');
+        res.redirect('https://unisync-api.onrender.com/homepage');
 });
 // // Login Route
 // app.get('/login', 
